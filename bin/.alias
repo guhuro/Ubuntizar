@@ -1,3 +1,14 @@
+br()
+{
+  while true
+  do
+  sleep 18000
+  xcowsay Breaaak
+  paplay /usr/share/sounds/KDE-Im-Irc-Event.ogg
+  done
+}
+
+alias beep='paplay /usr/share/sounds/KDE-Im-Message-In.ogg'
 
 mypdflat()
 {
@@ -10,6 +21,15 @@ ged() {
 	gedit $1 &
 }
 alias g=ged
+
+#s() {
+#  ~/bin/Sublime\ Text\ 2/sublime_text &> /dev/null &
+#  for i in $@
+#  do
+#    ~/bin/Sublime\ Text\ 2/sublime_text $i &> /dev/null &
+#  done
+#}
+alias s='subl'
 
 alias pu='rm *~ *.log *.aux *.dvi *# *.toc *.out'
 
@@ -27,20 +47,22 @@ alias moc='gnome-terminal --geometry 110x25+400+300 -e mocp'
 
 # alias moc='sudo  mount /dev/sda3 /media/1E784E3B784E1247;gnome-terminal --geometry 110x25+400+300 -e mocp'  este monta la unidad antes, hace falta crear la carpeta /media/1E784E3B784E1247
 
+thread() {
+	gnome-terminal -e "$@"
+}
 
 pdfear() {
 	okular $1 &
 }
 alias pdf=pdfear
 
+alias w8='sudo mount -o ro /dev/sda2 /media/w8/'
+
 # -----navegacion
 
-alias docs='cd ~/Documentos'
+alias tp='cd ~/Documentos/tps/Orga-2/TPfinal/moog/'
+alias a3='cd ~/Documentos/tps/algo3/algo3-tp2/'
 
-alias tp='cd Documentos/TPs/Algo\ 2/'
-
-
-alias prog='cd ~/Documentos/Programacion'
 
 alias ..='cd ..'
 
@@ -48,11 +70,7 @@ alias ...='cd ../..'
 
 alias ....='cd ../../..'
 
-alias mus='sh ~/bin/mus.sh'
-
 alias milagro='ssh nroulet@milagro.dc.uba.ar'
-
-alias git?='echo Para pullear y repushear: ; echo "    git pull origin master"; echo "    git commit -a -m <nombreDeCommit>"; echo "    git push origin master"; echo "Para agregar archivos: git add <nombreArchivo>"; echo "Para configurar la carpeta con git:"; echo "    git init"; echo "    git remote add origin <direccionDelRepo>"; echo "    git pull origin master"; echo "    git fetch origin"; echo "   git pull origin master"; echo "Para ver estado: git status"; echo "Para configurar mail y nombre de usuario:"; echo "    git config --global user.name nombreEntreComillas"; echo "    git config --global user.email mailSinComillas"'
 
 function setgov ()
 {
@@ -61,4 +79,7 @@ function setgov ()
 
 alias governors='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors '
 
-alias milagro='ssh nroulet@milagro.dc.uba.ar'
+alias gov='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
+
+
+
