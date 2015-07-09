@@ -12,7 +12,7 @@ alias beep='paplay /usr/share/sounds/KDE-Im-Message-In.ogg'
 
 mypdflat()
 {
-pdflatex $1 ;pdflatex $1
+pdflatex $1 && pdflatex $1
 }
 alias lat=mypdflat
 
@@ -30,6 +30,7 @@ alias g=ged
 #  done
 #}
 alias s='subl'
+alias scpp='subl *.cpp *.h Makefile'
 
 alias pu='rm *~ *.log *.aux *.dvi *# *.toc *.out'
 
@@ -61,8 +62,8 @@ alias w8='sudo mount -o ro /dev/sda2 /media/w8/'
 # -----navegacion
 
 alias tp='cd ~/Documentos/tps/Orga-2/TPfinal/moog/'
-alias a3='cd ~/Documentos/tps/algo3/algo3-tp2/'
-
+alias a3='cd ~/Documentos/tps/algo3/algo3-tp3/src'
+alias so='cd ~/Documentos/tps/SO/Sisop/Tp3/src'
 
 alias ..='cd ..'
 
