@@ -45,6 +45,10 @@ vimear() {
 alias vime=vimear	#este necesita un nuevo profile de gnome-terminal que se llame Vim
 
 alias moc='gnome-terminal --geometry 110x25+400+300 -e mocp'
+alias mocrm='rm /home/nico/.moc/pid'
+
+alias astudio='/opt/android-studio/bin/studio.sh &'
+
 
 # alias moc='sudo  mount /dev/sda3 /media/1E784E3B784E1247;gnome-terminal --geometry 110x25+400+300 -e mocp'  este monta la unidad antes, hace falta crear la carpeta /media/1E784E3B784E1247
 
@@ -71,6 +75,10 @@ alias ...='cd ../..'
 
 alias ....='cd ../../..'
 
+alias setwd='pwd > ~/bin/.saved-wd.txt'
+
+alias wd='cd $(cat ~/bin/.saved-wd.txt)'
+
 alias milagro='ssh nroulet@milagro.dc.uba.ar'
 
 function setgov ()
@@ -81,6 +89,5 @@ function setgov ()
 alias governors='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors '
 
 alias gov='cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-
 
 
