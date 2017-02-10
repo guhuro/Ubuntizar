@@ -113,3 +113,10 @@ if ! shopt -oq posix; then
   fi
 fi
 test -s ~/bin/.alias && . ~/bin/.alias || true
+
+# git aliases
+
+alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
+alias ggo='git log --abbrev-commit --all --graph --decorate --color'
+
+
